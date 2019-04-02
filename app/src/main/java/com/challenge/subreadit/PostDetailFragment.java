@@ -1,11 +1,11 @@
 package com.challenge.subreadit;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,8 +44,7 @@ public class PostDetailFragment extends Fragment implements PostDetailPresenter.
     }
 
     private void setupToolbar() {
-        Activity activity = this.getActivity();
-        Toolbar toolbar = activity.findViewById(R.id.toolbar);
+        Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("r/" + postData.getSubreddit());
     }
 
